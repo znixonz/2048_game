@@ -18,4 +18,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Credits 
 This project is referencing 
-[Github pages](https://github.com/anuranBarman/2048)
+[Github pages](https://github.com/zh8637688/Flutter-Example/tree/master/flutter2048)
