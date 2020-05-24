@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'tileboard.dart';
+import 'widget/tileboard.dart';
+import 'widget/scoretile.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              ScoreTile(score: 2048, highscore: 9999),
               TileBoard(
                 numberoftile: tile,
               )
