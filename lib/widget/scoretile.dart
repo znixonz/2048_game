@@ -14,7 +14,7 @@ class ScoreTile extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[_buildLogo(), _buildScore()],
+        children: <Widget>[_buildLogo(), _buildScorePanel()],
       ),
     );
   }
@@ -37,52 +37,39 @@ class ScoreTile extends StatelessWidget {
     );
   }
 
-  Widget _buildScore() {
+  Widget _buildScorePanel() {
     return Container(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(top: 10),
-            height: 100,
-            width: 100,
-            child: Column(
-              children: <Widget>[
-                Text(
-                  "SCORE",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Text("2048")
-              ],
-            ),
-            color: Colors.grey,
-          ),
+          _buildScore("Score", 2048),
           SizedBox(
             width: 20,
           ),
-          Container(
-            padding: EdgeInsets.only(top: 10),
-            child: Column(
-              children: <Widget>[
-                Text(
-                  "HIGH SCORE",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text("9999")
-              ],
-            ),
-            height: 100,
-            width: 100,
-            color: Colors.grey,
-          )
+          _buildScore("HIGH SCORE", 9999)
         ],
       ),
+    );
+  }
+
+  Widget _buildScore(String title, int score) {
+    return Container(
+      padding: EdgeInsets.only(top: 10),
+      height: 100,
+      width: 100,
+      child: Column(
+        children: <Widget>[
+          Text(
+            "$title",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Text("$score")
+        ],
+      ),
+      color: Colors.grey,
     );
   }
 }
