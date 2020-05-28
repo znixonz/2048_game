@@ -7,7 +7,6 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-//Test
 class _HomePageState extends State<HomePage> {
   int score;
   int best;
