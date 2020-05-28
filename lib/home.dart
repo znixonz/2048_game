@@ -6,7 +6,6 @@ class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
-//test
 
 class _HomePageState extends State<HomePage> {
   int score;
